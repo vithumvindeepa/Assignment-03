@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Case 1 (Using Absolute & Relative)</title>
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+
+    <style>
+        section{
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+        }
+
+        div{
+            width: 50vw;
+            height: 50vh;
+            position: relative;
+        }
+
+        .d1{
+            background-color: #ff253a;
+        }
+
+
+        section>.d1>div{
+            width: 15vw;
+            height: 15vw;
+            border-radius: 100%;
+            background: #eeeeee;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+
+        section>.d1>div>div{
+            width: 5vw;
+            height: 5vw;
+            background: #ff253a;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        .d2{
+            background-color: green;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+
+        section>.d2>div{
+            width: 15vw;
+            height: 15vw;
+            border-radius: 100%;
+            background: #eeeeee;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+
+        section>.d2>div>div{
+            width: 5vw;
+            height: 5vw;
+            background: #ff253a;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        .d3{
+            background-color: darkgoldenrod;
+            position: absolute;
+            bottom: 0;
+        }
+
+
+        section>.d3>div{
+            width: 15vw;
+            height: 15vw;
+            border-radius: 100%;
+            background: #eeeeee;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+
+        section>.d3>div>div{
+            width: 5vw;
+            height: 5vw;
+            background: #ff253a;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        .d4{
+            background-color: deeppink;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        section>.d4>div{
+            width: 15vw;
+            height: 15vw;
+            border-radius: 100%;
+            background: #eeeeee;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+
+        section>.d4>div>div{
+            width: 5vw;
+            height: 5vw;
+            background: #ff253a;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        .corner{
+            width: 15vw;
+            height: 15vw;
+            background-color: white;
+            position: absolute;
+        }
+
+        #corner1{
+            border-radius: 100%;
+            position: absolute;
+            top: -7.5vw;
+            left: -7.5vw;
+        }
+
+        #corner2{
+            height: 7.5vw;
+            width: 7.5vw;
+            border-radius: 0 0 0 7.5vw;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        #corner3{
+            height: 7.5vw;
+            border-radius: 0 7.5vw 0 0;
+            position: absolute;
+            bottom:  0;
+            left: -7.5vw;
+        }
+
+        #corner4{
+            position: absolute;
+            height: 7.5vw;
+            width: 7.5vw;
+            border-radius: 7.5vw 0 0 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        #corner5{
+            height: 7.5vw;
+            border-radius: 7.5vw 7.5vw 0 0;
+            position: absolute;
+            left: calc(50% - 15vw/2);
+            bottom: 0;
+        }
+
+        #corner6{
+            height: 7.5vw;
+            border-radius: 0 0 7.5vw 7.5vw;
+            position: absolute;
+            left: calc(50% - 15vw/2);
+            top: 0;
+        }
+
+        #middle{
+            width: 15vw;
+            height: 15vw;
+            background-color: white;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        #middle>div{
+            width: 8vw;
+            height: 8vw;
+            position: absolute;
+            background-color: #ff253a;
+            border-radius: 100%;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<section>
+    <div class="d1">
+        <div>
+            <div></div>
+        </div>
+    </div>
+
+    <div class="d2">
+        <div>
+            <div></div>
+        </div>
+    </div>
+
+    <div class="d3">
+        <div>
+            <div></div>
+        </div>
+    </div>
+
+    <div class="d4">
+        <div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="corner1" class="corner"></div>
+    <div id="corner2" class="corner"></div>
+    <div id="corner3" class="corner"></div>
+    <div id="corner4" class="corner"></div>
+    <div id="corner5" class="corner"></div>
+    <div id="corner6" class="corner"></div>
+    <div id="middle" >
+        <div id="middleRound" ></div>
+    </div>
+
+</section>
+
+</body>
+</html>
